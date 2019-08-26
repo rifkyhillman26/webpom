@@ -1,0 +1,8 @@
+<%- include('../partials/header.ejs') %>
+<div class="container">
+    <% for(let i=0; i < data.length;i++) {%>
+        <h3><%= data[i].title %></h3>
+        <p><%= data[i].content %></p>
+    <%}%>
+</div>
+<%- include('../partials/footer.ejs') %>

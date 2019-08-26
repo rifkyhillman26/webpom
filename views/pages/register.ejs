@@ -1,0 +1,107 @@
+<%- include('../partials/header.ejs') %>
+
+<style>
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  padding: 16px 20px;
+  margin: 8px 0;
+  width: 30%;
+  font-size: 15px;
+  height: 53px;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+.body {
+  border: 3px solid #757575;
+  background-color: N/A;
+  width: 40%;
+  margin-left: 30%;
+  border-radius: 15px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+}
+
+b {
+  color: #424242;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+</style>
+
+<form action="action_page.php" class="body">
+    <div class="container">
+      <h1>Register</h1>
+      <p>Silakan isi formulir ini untuk membuat akun.</p>
+      <hr>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" />
+  
+      <label for="psw"><b>Kata sandi</b></label>
+      <input type="password" placeholder="Enter Password" />
+  
+      <label for="psw-repeat"><b>Masukkan kata kunci kembali</b></label>
+      <input type="password" placeholder="Repeat Password" />
+      <hr>
+        
+        <div class="button">
+          <button type="submit" class="registerbtn">Register</button>
+        </div>
+     </div>
+  
+    <div class="container signin">
+      <p>sudah memiliki akun ?<a href="/signin">Signin</a></p>
+    </div>
+  </form>
+
+  <%- include('../partials/footer.ejs') %>
