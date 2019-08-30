@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container">
+    <form action="/proses-kategori" method="post">
+        <label for="Nama">
+            <input type="text" name="Nama" placeholder="isi judul.." />
+        </label>
+
+        <button type="submit">Save</button>
+    </form>
+
+    <hr />
+
+    <% for(let i=0; i < data.length;i++) {%>
+        <p><%= data[i].Nama %></p>
+       <button><a href="/hapus-kategori/<%= data[i].id %>">Tes</a></button>
+    <%}%>
+
+</div>

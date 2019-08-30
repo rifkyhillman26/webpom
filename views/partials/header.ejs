@@ -17,7 +17,12 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="/tutorial">Tutorial</a></li>
         <li><a href="/tentang">Tentang</a></li>
+        <% if(locals.kunci) { %>
+        <li><a href="/"><%= locals.kunci.username %></a></li> 
+        <li><a href="/logout">Logout</a></li> 
+        <% } else { %>
         <li><a href="/register">Signin/Register</a></li>
+        <% } %>
         <!-- Dropdown Trigger -->
       </ul>
     </div>

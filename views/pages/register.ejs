@@ -78,20 +78,24 @@ h1 {
 }
 </style>
 
-<form action="action_page.php" class="body">
+<% if(err) { %>
+  <h3> <%= err %> </h3>
+<% }%>
+
+<form action="/proses-register" class="body" method="post">
     <div class="container">
       <h1>Register</h1>
       <p>Silakan isi formulir ini untuk membuat akun.</p>
       <hr>
   
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" />
+      <label for="email"><b>Username</b></label>
+      <input type="text" name='username' placeholder="Enter Username" />
   
-      <label for="psw"><b>Kata sandi</b></label>
-      <input type="password" placeholder="Enter Password" />
+      <label for="psw"><b>Password</b></label>
+      <input type="password" name='password' placeholder="Enter Password" />
   
-      <label for="psw-repeat"><b>Masukkan kata kunci kembali</b></label>
-      <input type="password" placeholder="Repeat Password" />
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" name='Repeatpsw' placeholder="Repeat Password" />
       <hr>
         
         <div class="button">
